@@ -23,7 +23,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
-                <Link href="/properties">Browse Properties</Link>
+                <Link href="/properties">Browse Experiences</Link>
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

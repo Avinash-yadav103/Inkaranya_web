@@ -154,8 +154,15 @@ export function ComingSoon() {
               initial={{ y: -30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
+              className="mb-8 flex flex-col items-center"
             >
+              <Image 
+                src="/logo.jpg" 
+                alt="INKARANYA Logo"
+                width={80}
+                height={80}
+                className="rounded-md mb-4 object-contain"
+              />
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">INKARANYA</h1>
               <p className="text-sm text-amber-200">educational exploration</p>
             </motion.div>

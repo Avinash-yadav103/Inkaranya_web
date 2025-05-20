@@ -15,9 +15,12 @@ export function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button 
+          variant="ghost" 
+          className="hover:bg-purple-100 hover:text-purple-700 px-3 flex items-center gap-2"
+        >
           <Globe className="h-4 w-4" />
-          <span className="ml-2 hidden md:inline">{language}</span>
+          <span>{language}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

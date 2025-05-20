@@ -26,11 +26,11 @@ export function PropertyFilters() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <Tabs defaultValue="stay" className="w-full">
+      <Tabs defaultValue="experience" className="w-full">
         <TabsList className="mb-4 bg-primary/10">
-          <TabsTrigger value="stay" className="data-[state=active]:bg-primary">
+          {/* <TabsTrigger value="stay" className="data-[state=active]:bg-primary">
             Stays
-          </TabsTrigger>
+          </TabsTrigger> */}
           <TabsTrigger value="experience" className="data-[state=active]:bg-primary">
             Experiences
           </TabsTrigger>

@@ -9,6 +9,7 @@ import { UserNav } from "@/components/user-nav"
 import { LanguageToggle } from "@/components/language-toggle"
 import { Search, Menu } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 export function Header() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -54,6 +55,9 @@ export function Header() {
                 <Link href="/about" className="text-lg font-semibold">
                   About Us
                 </Link>
+                <Link href="/partner" className="text-lg font-semibold">
+                  Partner With Us
+                </Link>
                 <Link href="/properties" className="text-lg font-semibold">
                   Properties
                 </Link>
@@ -76,7 +80,14 @@ export function Header() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src="/logo.jpg" 
+                alt="INKARANYA Logo"
+                width={40}
+                height={40}
+                className="rounded-md object-contain"
+              />
               <div className="font-serif font-bold text-xl md:text-2xl">INKARANYA</div>
             </Link>
           </motion.div>
@@ -100,17 +111,22 @@ export function Header() {
           </motion.div>
 
           <motion.div
-            className="flex items-center gap-2"
+            className="flex items-center gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <div className="hidden md:flex">
-              <Button variant="ghost" asChild>
+            <div className="hidden md:flex md:space-x-4">
+              <Button variant="ghost" asChild className="hover:bg-purple-100 hover:text-purple-700 px-3">
                 <Link href="/about">About Us</Link>
               </Button>
-              <LanguageToggle />
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="hover:bg-purple-100 hover:text-purple-700 px-3 min-w-[140px]">
+                <Link href="/partner">Partner With Us</Link>
+              </Button>
+              <div className="px-1">
+                <LanguageToggle />
+              </div>
+              <Button variant="ghost" asChild className="hover:bg-purple-100 hover:text-purple-700 px-3">
                 <Link href="/host">Become a Host</Link>
               </Button>
             </div>
