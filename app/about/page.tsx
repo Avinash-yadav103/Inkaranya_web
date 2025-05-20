@@ -10,7 +10,7 @@ export default function AboutPage() {
 
         <div className="relative aspect-[16/9] w-full mb-8">
           <Image
-            src="/placeholder.svg?height=500&width=1000&text=About+INKARANYA"
+            src="/banners/about-banner.jpg"
             alt="About INKARANYA"
             fill
             className="object-cover rounded-lg"

@@ -10,7 +10,7 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/placeholder.svg?height=600&width=1600&text=Beautiful+Destination')",
+          backgroundImage: "url('https://a0.muscache.com/im/pictures/hosting/Hosting-1375174929654169274/original/859618ab-ba37-4d4a-9838-b50421d2539c.jpeg?im_w=1200')",
           filter: "brightness(0.7)",
         }}
       />
