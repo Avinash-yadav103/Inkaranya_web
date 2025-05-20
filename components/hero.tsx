@@ -10,8 +10,16 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://a0.muscache.com/im/pictures/hosting/Hosting-1375174929654169274/original/859618ab-ba37-4d4a-9838-b50421d2539c.jpeg?im_w=1200')",
+          backgroundImage: "url('/banners/hero.jpg')",
           filter: "brightness(0.7)",
+        }}
+      />
+      {/* Green overlay gradient */}
+      <div 
+        className="absolute inset-0" 
+        style={{ 
+          background: "linear-gradient(135deg, rgba(30, 58, 41, 0.7) 0%, rgba(44, 64, 55, 0.6) 50%, rgba(30, 58, 41, 0.7) 100%)",
+          mixBlendMode: "multiply"
         }}
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
@@ -22,12 +30,12 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+              <Button size="lg" className="bg-[#2c7b50] hover:bg-[#23593b] text-white" asChild>
                 <Link href="/properties">Browse Experiences</Link>
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button size="lg" variant="outline" className="bg-white/10 text-white hover:bg-white/20" asChild>
+              <Button size="lg" variant="outline" className="bg-white/10 text-white border-[#4a7b63] hover:bg-white/20 hover:border-white" asChild>
                 <Link href="/host">Become a Host</Link>
               </Button>
             </motion.div>

@@ -236,7 +236,7 @@ export function ComingSoon() {
               <Button
                 onClick={handleEnterSite}
                 size="lg"
-                className="bg-[#f8e3a3] text-[#1a472a] hover:bg-[#eed78a] px-8 py-4 rounded-full font-medium"
+                className="bg-[#5d8b2f] text-white hover:bg-[#4a7023] px-8 py-4 rounded-full font-medium"
               >
                 Enter Site
               </Button>

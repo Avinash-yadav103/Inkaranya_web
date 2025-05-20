@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 export function Footer() {
   return (
-    <footer className="border-t py-12 mt-12 bg-gradient-to-b from-white to-primary/5">
+    <footer className="border-t py-12 mt-12 bg-gradient-to-b from-white to-green-50">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <motion.div
@@ -14,7 +14,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-bold text-lg mb-4 font-serif">INKARANYA</h3>
+            <h3 className="font-bold text-lg mb-4 font-serif text-[#1e583d]">INKARANYA</h3>
             <p className="text-muted-foreground">
               Find your perfect stay and discover unique experiences around the world.
             </p>
@@ -114,16 +114,16 @@ export function Footer() {
           </motion.div>
         </div>
 
-        <div className="border-t mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-green-100 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} INKARANYA. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="text-muted-foreground hover:text-[#1e583d] transition-colors">
               Facebook
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="text-muted-foreground hover:text-[#1e583d] transition-colors">
               Twitter
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="#" className="text-muted-foreground hover:text-[#1e583d] transition-colors">
               Instagram
             </Link>
           </div>

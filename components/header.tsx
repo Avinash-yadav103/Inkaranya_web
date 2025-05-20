@@ -88,7 +88,7 @@ export function Header() {
                 height={40}
                 className="rounded-md object-contain"
               />
-              <div className="font-serif font-bold text-xl md:text-2xl">INKARANYA</div>
+              <div className="font-serif font-bold text-xl md:text-2xl text-[#1e583d]">INKARANYA</div>
             </Link>
           </motion.div>
 
@@ -117,16 +117,16 @@ export function Header() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="hidden md:flex md:space-x-4">
-              <Button variant="ghost" asChild className="hover:bg-purple-100 hover:text-purple-700 px-3">
+              <Button variant="ghost" asChild className="hover:bg-green-100 hover:text-[#1e583d] px-3">
                 <Link href="/about">About Us</Link>
               </Button>
-              <Button variant="ghost" asChild className="hover:bg-purple-100 hover:text-purple-700 px-3 min-w-[140px]">
+              <Button variant="ghost" asChild className="hover:bg-green-100 hover:text-[#1e583d] px-3 min-w-[140px]">
                 <Link href="/partner">Partner With Us</Link>
               </Button>
               <div className="px-1">
                 <LanguageToggle />
               </div>
-              <Button variant="ghost" asChild className="hover:bg-purple-100 hover:text-purple-700 px-3">
+              <Button variant="ghost" asChild className="hover:bg-green-100 hover:text-[#1e583d] px-3">
                 <Link href="/host">Become a Host</Link>
               </Button>
             </div>

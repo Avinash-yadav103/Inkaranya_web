@@ -17,7 +17,7 @@ export function LanguageToggle() {
       <DropdownMenuTrigger asChild>
         <Button 
           variant="ghost" 
-          className="hover:bg-purple-100 hover:text-purple-700 px-3 flex items-center gap-2"
+          className="hover:bg-green-100 hover:text-[#1e583d] px-3 flex items-center gap-2"
         >
           <Globe className="h-4 w-4" />
           <span>{language}</span>
