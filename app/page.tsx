@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero"
 import { ExperienceSection } from "@/components/experience-section"
 import { PartnerUniversities } from "@/components/partner-universities"
 import { ContactCta } from "@/components/contact-cta"
+import { HomeTestimonial } from "@/components/home-testimonial"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <PropertyGrid />
         <ExperienceSection />
         <PartnerUniversities />
+        <HomeTestimonial />
         <ContactCta />
       </div>
     </div>

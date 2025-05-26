@@ -10,18 +10,11 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/banners/hero.jpg')",
-          filter: "brightness(0.7)",
+          backgroundImage: `url("https://images.unsplash.com/photo-1615874694520-474822394e73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80")`,
+          filter: "brightness(0.85)",
         }}
       />
-      {/* Green overlay gradient */}
-      <div 
-        className="absolute inset-0" 
-        style={{ 
-          background: "linear-gradient(135deg, rgba(30, 58, 41, 0.7) 0%, rgba(44, 64, 55, 0.6) 50%, rgba(30, 58, 41, 0.7) 100%)",
-          mixBlendMode: "multiply"
-        }}
-      />
+      {/* Content section */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Find Your Perfect Stay</h1>
