@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Search, Calendar, Users } from "lucide-react"
 import Image from "next/image"
+import { EarthGlobe } from "./earth-globe"
 
 export function ComingSoon() {
   const [isVisible, setIsVisible] = useState(true)
@@ -98,6 +99,9 @@ export function ComingSoon() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
+          {/* 3D Earth Globe */}
+          <EarthGlobe />
+          
           {/* Background stripes like zoo image */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute inset-0" style={{ 
@@ -156,6 +160,13 @@ export function ComingSoon() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
+              <Image 
+                src="/logo.jpg" 
+                alt="INKARANYA Logo"
+                width={80}
+                height={80}
+                className="rounded-md mb-4 object-contain mx-auto"
+              />
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">INKARANYA</h1>
               <p className="text-sm text-amber-200">educational exploration</p>
             </motion.div>
