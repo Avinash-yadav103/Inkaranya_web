@@ -119,7 +119,7 @@ export function PropertyGrid() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Featured Properties
+          Featured Organizations
         </motion.h2>
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
           <Link href="/properties" className="text-primary hover:underline">

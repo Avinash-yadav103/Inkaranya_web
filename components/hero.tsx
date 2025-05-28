@@ -17,8 +17,8 @@ export function Hero() {
       {/* Content section */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Find Your Perfect Stay</h1>
-          <p className="text-xl text-white mb-8 max-w-2xl">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">First Global Platform for Experiential Learning</h1>
+          <p className="text-xl text-white mb-8 max-w-8xl">
             Discover unique accommodations and experiences around the world
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
