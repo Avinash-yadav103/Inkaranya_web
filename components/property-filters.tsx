@@ -32,10 +32,10 @@ export function PropertyFilters() {
             Stays
           </TabsTrigger> */}
           <TabsTrigger value="experience" className="data-[state=active]:bg-primary">
-            Experiences
+            Organizations
           </TabsTrigger>
           <TabsTrigger value="university" className="data-[state=active]:bg-primary">
-            Organizations
+            Universities
           </TabsTrigger>
         </TabsList>
 

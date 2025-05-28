@@ -19,7 +19,7 @@ export function Hero() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">First Global Platform for Experiential Learning</h1>
           <p className="text-xl text-white mb-8 max-w-8xl">
-            Discover unique accommodations and experiences around the world
+            Discover your perfect experiential opportunity
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
