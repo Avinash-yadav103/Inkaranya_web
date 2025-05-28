@@ -145,25 +145,25 @@ export function ComingSoon() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="w-full max-w-4xl mx-auto mb-12"
             >
-              <div className="bg-white/90 backdrop-blur-sm rounded-full shadow-xl overflow-hidden border border-green-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-full shadow-xl overflow-hidden border border-green-100">
                 <div className="flex flex-col md:flex-row">
                   {/* First section - Search */}
-                  <div className="flex items-center pl-6 py-3 md:py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
-                    <div className="flex items-center text-gray-600">
-                      <Search className="h-5 w-5 mr-3" />
+                  <div className="flex items-center pl-4 md:pl-6 py-3 md:py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
+                    <div className="flex items-center text-gray-600 w-full">
+                      <Search className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 flex-shrink-0" />
                       <input
                         type="text"
                         placeholder="Search organizations"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="bg-transparent border-none outline-none w-full text-gray-700 placeholder:text-gray-500"
+                        className="bg-transparent border-none outline-none w-full text-sm md:text-base text-gray-700 placeholder:text-gray-500"
                       />
                     </div>
                   </div>
                   
                   {/* Second section - Organization Type */}
-                  <div className="flex items-center pl-6 py-3 md:py-4 border-b md:border-b-0 md:border-r border-gray-200">
-                    <select className="appearance-none bg-transparent border-none outline-none pr-12 text-gray-700 w-full">
+                  <div className="flex items-center pl-4 md:pl-6 py-3 md:py-4 border-b md:border-b-0 md:border-r border-gray-200">
+                    <select className="appearance-none bg-transparent border-none outline-none pr-6 md:pr-12 text-sm md:text-base text-gray-700 w-full">
                       <option value="">Organization Type</option>
                       <option value="non-profit">Non-Profit</option>
                       <option value="corporate">Corporate</option>
@@ -173,9 +173,9 @@ export function ComingSoon() {
                   </div>
                   
                   {/* Button */}
-                  <div className="p-2">
+                  <div className="p-3 md:p-2">
                     <Button
-                      className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-full px-8 py-5 font-medium w-full md:w-auto"
+                      className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-xl md:rounded-full px-4 md:px-8 py-2 md:py-5 text-sm md:text-base font-medium w-full"
                     >
                       Browse Experiences
                     </Button>

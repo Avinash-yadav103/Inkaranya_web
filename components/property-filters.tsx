@@ -35,7 +35,7 @@ export function PropertyFilters() {
             Experiences
           </TabsTrigger>
           <TabsTrigger value="university" className="data-[state=active]:bg-primary">
-            Universities
+            Organizations
           </TabsTrigger>
         </TabsList>
 
