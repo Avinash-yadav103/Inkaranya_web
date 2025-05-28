@@ -105,12 +105,12 @@ export function ComingSoon() {
               <Image 
                 src="/logo.jpg" 
                 alt="INKARANYA Logo"
-                width={80}
-                height={80}
+                width={120}
+                height={120}
                 className="rounded-md mb-4 object-contain mx-auto"
               />
-              <h1 className="text-3xl md:text-4xl font-bold text-[#1e583d] mb-2 drop-shadow-md">INKARANYA</h1>
-              <p className="text-sm text-[#1e583d] font-medium">educational exploration</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#1e583d] mb-2 drop-shadow-md">INKARANYA</h1>
+              <p className="text-sm text-[#1e583d] font-medium"> The First Global Platform for Experiential Learning</p>
             </motion.div>
             
             {/* Coming Soon headline - Added background and shadow for better visibility */}
@@ -134,11 +134,18 @@ export function ComingSoon() {
               className="bg-white/40 backdrop-blur-sm px-6 py-3 rounded-xl mb-12 max-w-2xl mx-auto"
             >
               <p className="text-lg text-[#1e583d] font-medium">
-                Discover unique accommodations, experiences, and educational opportunities
+                An Initiative by the School of Liberal Arts, Bennett University
               </p>
             </motion.div>
+
+            {/* Added background for better visibility */}
+              {/* <div className="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full">
+                <p className="text-[#1e583d] font-medium text-sm">
+                  
+                </p>
+              </div> */}
             
-            {/* Search Bar */}
+            {/* Search Bar - Improved for mobile */}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -148,12 +155,12 @@ export function ComingSoon() {
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-full shadow-xl overflow-hidden border border-green-100">
                 <div className="flex flex-col md:flex-row">
                   {/* First section - Search */}
-                  <div className="flex items-center pl-4 md:pl-6 py-3 md:py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
+                  <div className="flex items-center pl-4 md:pl-6 py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
                     <div className="flex items-center text-gray-600 w-full">
-                      <Search className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 flex-shrink-0" />
+                      <Search className="h-4 w-4 md:h-5 md:w-5 mr-3 flex-shrink-0" />
                       <input
                         type="text"
-                        placeholder="Search organizations"
+                        placeholder="Search projects and organizations"
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="bg-transparent border-none outline-none w-full text-sm md:text-base text-gray-700 placeholder:text-gray-500"
@@ -161,8 +168,8 @@ export function ComingSoon() {
                     </div>
                   </div>
                   
-                  {/* Second section - Organization Type */}
-                  <div className="flex items-center pl-4 md:pl-6 py-3 md:py-4 border-b md:border-b-0 md:border-r border-gray-200">
+                  {/* Second section - Organization Type - Better mobile padding */}
+                  <div className="flex items-center px-4 md:px-6 py-4 border-b md:border-b-0 md:border-r border-gray-200">
                     <select className="appearance-none bg-transparent border-none outline-none pr-6 md:pr-12 text-sm md:text-base text-gray-700 w-full">
                       <option value="">Organization Type</option>
                       <option value="non-profit">Non-Profit</option>
@@ -172,10 +179,10 @@ export function ComingSoon() {
                     </select>
                   </div>
                   
-                  {/* Button */}
-                  <div className="p-3 md:p-2">
+                  {/* Button - Better mobile treatment */}
+                  <div className="p-4 md:p-3">
                     <Button
-                      className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-xl md:rounded-full px-4 md:px-8 py-2 md:py-5 text-sm md:text-base font-medium w-full"
+                      className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-xl md:rounded-full py-3 md:py-4 text-sm md:text-base font-medium w-full"
                     >
                       Browse Experiences
                     </Button>
@@ -194,17 +201,13 @@ export function ComingSoon() {
               <Button
                 onClick={handleEnterSite}
                 size="lg"
-                className="bg-[#2c7b50] text-white hover:bg-[#23593b] px-8 py-4 rounded-full font-medium mb-4"
+                disabled
+                className="bg-[#2c7b50] text-white hover:bg-[#23593b] px-8 py-4 rounded-full font-medium mb-4 opacity-50 cursor-not-allowed"
               >
                 Enter Site
               </Button>
               
-              {/* Added background for better visibility */}
-              <div className="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full">
-                <p className="text-[#1e583d] font-medium text-sm">
-                  An Initiative by the School of Liberal Arts, Bennett University
-                </p>
-              </div>
+              
             </motion.div>
           </div>
         </motion.div>
