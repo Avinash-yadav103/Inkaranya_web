@@ -105,19 +105,30 @@ export function ComingSoon() {
               <Image 
                 src="/logo.jpg" 
                 alt="INKARANYA Logo"
-                width={120}
-                height={120}
+                width={150}
+                height={150}
                 className="rounded-md mb-4 object-contain mx-auto"
               />
-              <h1 className="text-4xl md:text-5xl font-bold text-[#1e583d] mb-2 drop-shadow-md">INKARANYA</h1>
+              <h1 className="text-5xl md:text-6xl font-bold text-[#1e583d] mb-2 drop-shadow-md">INKARANYA</h1>
               <p className="text-sm text-[#1e583d] font-medium"> The First Global Platform for Experiential Learning</p>
             </motion.div>
             
-            {/* Coming Soon headline - Added background and shadow for better visibility */}
+            {/* Coming Soon headline with pulsing animation */}
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
+              animate={{ 
+                scale: [1, 1.05, 1],
+                opacity: 1 
+              }}
+              transition={{ 
+                scale: {
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  duration: 2,
+                  ease: "easeInOut"
+                },
+                opacity: { duration: 0.8, delay: 0.2 }
+              }}
               className="mb-6"
             >
               <h2 className="text-5xl md:text-7xl font-bold text-[#1e583d] tracking-wide leading-tight drop-shadow-lg" 
@@ -126,24 +137,17 @@ export function ComingSoon() {
               </h2>
             </motion.div>
             
-            {/* Description - Added semi-transparent background */}
+            {/* Description - Added red text color */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               className="bg-white/40 backdrop-blur-sm px-6 py-3 rounded-xl mb-12 max-w-2xl mx-auto"
             >
-              <p className="text-lg text-[#1e583d] font-medium">
+              <p className="text-lg font-medium text-red-600">
                 An Initiative by the School of Liberal Arts, Bennett University
               </p>
             </motion.div>
-
-            {/* Added background for better visibility */}
-              {/* <div className="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full">
-                <p className="text-[#1e583d] font-medium text-sm">
-                  
-                </p>
-              </div> */}
             
             {/* Search Bar - Improved for mobile */}
             <motion.div
@@ -207,7 +211,12 @@ export function ComingSoon() {
                 Enter Site
               </Button>
               
-              
+              {/* Added background for better visibility */}
+              {/* <div className="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full">
+                <p className="text-[#1e583d] font-medium text-sm">
+                  An Initiative by the School of Liberal Arts, Bennett University
+                </p>
+              </div> */}
             </motion.div>
           </div>
         </motion.div>
