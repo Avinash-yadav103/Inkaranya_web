@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Search } from "lucide-react"
 import Image from "next/image"
-import { EarthGlobe } from "./earth-globe" // Add this import
+import { EarthGlobe } from "./earth-globe"
 
 export function ComingSoon() {
   const [isVisible, setIsVisible] = useState(true)
@@ -82,16 +82,19 @@ export function ComingSoon() {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed inset-0 z-50 overflow-hidden bg-white"
+          className="fixed inset-0 z-50 overflow-hidden"
+          style={{
+            background: "linear-gradient(135deg, #e8fff2 0%, #cdfff3 20%, #b0f5e6 50%, #8cefdb 70%, #cdfff3 100%)",
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
-          {/* Add the 3D Earth Globe */}
+          {/* Earth Globe component */}
           <EarthGlobe />
           
           {/* Main content */}
-          <div className="container flex flex-col items-center justify-center h-screen max-w-6xl mx-auto px-4 z-10 text-center relative">
+          <div className="container flex flex-col items-center justify-center h-screen max-w-6xl mx-auto px-4 z-20 text-center relative">
             {/* Logo & Title area */}
             <motion.div
               initial={{ y: -30, opacity: 0 }}
@@ -106,30 +109,34 @@ export function ComingSoon() {
                 height={80}
                 className="rounded-md mb-4 object-contain mx-auto"
               />
-              <h1 className="text-3xl md:text-4xl font-bold text-[#1e583d] mb-2">INKARANYA</h1>
-              <p className="text-sm text-[#5d8b2f]">educational exploration</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-[#1e583d] mb-2 drop-shadow-md">INKARANYA</h1>
+              <p className="text-sm text-[#1e583d] font-medium">educational exploration</p>
             </motion.div>
             
-            {/* Coming Soon headline */}
+            {/* Coming Soon headline - Added background and shadow for better visibility */}
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               className="mb-6"
             >
-              <h2 className="text-5xl md:text-7xl font-bold text-[#1e583d] tracking-wide leading-tight">
+              <h2 className="text-5xl md:text-7xl font-bold text-[#1e583d] tracking-wide leading-tight drop-shadow-lg" 
+                 style={{ textShadow: "0 4px 10px rgba(255, 255, 255, 0.6)" }}>
                 COMING SOON
               </h2>
             </motion.div>
             
-            <motion.p
+            {/* Description - Added semi-transparent background */}
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg text-gray-700 max-w-2xl mx-auto mb-12"
+              className="bg-white/40 backdrop-blur-sm px-6 py-3 rounded-xl mb-12 max-w-2xl mx-auto"
             >
-              Discover unique accommodations, experiences, and educational opportunities
-            </motion.p>
+              <p className="text-lg text-[#1e583d] font-medium">
+                Discover unique accommodations, experiences, and educational opportunities
+              </p>
+            </motion.div>
             
             {/* Search Bar */}
             <motion.div
@@ -138,7 +145,7 @@ export function ComingSoon() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="w-full max-w-4xl mx-auto mb-12"
             >
-              <div className="bg-white rounded-full shadow-xl overflow-hidden border border-gray-200">
+              <div className="bg-white/90 backdrop-blur-sm rounded-full shadow-xl overflow-hidden border border-green-100">
                 <div className="flex flex-col md:flex-row">
                   {/* First section - Search */}
                   <div className="flex items-center pl-6 py-3 md:py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
@@ -177,7 +184,7 @@ export function ComingSoon() {
               </div>
             </motion.div>
             
-            {/* Enter Site button */}
+            {/* Enter Site button and Initiative text */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -192,9 +199,12 @@ export function ComingSoon() {
                 Enter Site
               </Button>
               
-              <p className="text-gray-600 text-sm mt-2">
-                An Initiative by the School of Liberal Arts, Bennett University
-              </p>
+              {/* Added background for better visibility */}
+              <div className="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full">
+                <p className="text-[#1e583d] font-medium text-sm">
+                  An Initiative by the School of Liberal Arts, Bennett University
+                </p>
+              </div>
             </motion.div>
           </div>
         </motion.div>
