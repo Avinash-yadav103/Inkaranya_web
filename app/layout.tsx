@@ -19,9 +19,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "INKARANYA | Find your perfect stay",
-  description: "Book unique accommodations and experiences around the world",
-    generator: 'v0.dev'
+  title: "INKARANYA | A Gateway to a Transformative Experiential Learning Journey",
+  description: "An Initiative by the School of Liberal Arts, Bennett University",
+    generator: 'Inkaranya.com'
 }
 
 export default function RootLayout({
