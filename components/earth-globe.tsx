@@ -14,7 +14,7 @@ export function EarthGlobe() {
     // Initial position below viewport
     const startPosition = -2.5
     let currentPosition = startPosition
-    const targetPosition = -1.5
+    const targetPosition = -1.0
     
     const scene = new THREE.Scene()
     
