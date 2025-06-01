@@ -10,6 +10,7 @@ import { EarthGlobe } from "./earth-globe"
 export function ComingSoon() {
   const [isVisible, setIsVisible] = useState(true)
   const [searchQuery, setSearchQuery] = useState("")
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleEnterSite = () => {
     setIsVisible(false)
@@ -90,136 +91,75 @@ export function ComingSoon() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
         >
-          {/* Earth Globe component */}
-          <EarthGlobe />
+          {/* Positioned Earth Globe at bottom with less height to avoid overlap */}
+          <div className="absolute bottom-0 w-full h-[60vh] overflow-hidden opacity-80">
+            <EarthGlobe />
+          </div>
           
-          {/* Main content */}
+          {/* Main content with improved z-index */}
           <div className="container flex flex-col items-center justify-center h-screen max-w-6xl mx-auto px-4 z-20 text-center relative">
-            {/* Logo & Title area */}
+            {/* Logo & Title area with claymorphism */}
             <motion.div
               initial={{ y: -30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
+              className="mb-12"
+              whileHover={{ scale: 1.02 }}
             >
-              <Image 
-                src="/logo.jpg" 
-                alt="INKARANYA Logo"
-                width={150}
-                height={150}
-                className="rounded-md mb-4 object-contain mx-auto"
-              />
-              <h1 className="text-5xl md:text-6xl font-bold text-[#1e583d] mb-2 drop-shadow-md">INKARANYA</h1>
-              <p className="text-sm text-[#1e583d] font-medium"> The First Global Platform for Experiential Learning</p>
+              <div className="bg-white/80 backdrop-blur-md p-8 rounded-[28px] shadow-claymorphic transform transition-all duration-300 mx-auto max-w-2xl">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="INKARANYA Logo"
+                  width={150}
+                  height={150}
+                  className="rounded-2xl mb-4 object-contain mx-auto shadow-md"
+                />
+                <h1 className="text-5xl md:text-6xl font-bold text-[#1e583d] mb-3 font-serif">INKARANYA</h1>
+                <p className="text-sm md:text-base text-[#1e583d] font-medium font-sans"> 
+                  The First Global Platform for Experiential Learning
+                </p>
+              </div>
             </motion.div>
             
-            {/* Coming Soon headline with pulsing animation */}
+            {/* Coming Soon headline with improved contrast and claymorphism */}
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ 
-                scale: [1, 1.05, 1],
+                scale: [1, 1.03, 1],
                 opacity: 1 
               }}
               transition={{ 
                 scale: {
                   repeat: Infinity,
                   repeatType: "reverse",
-                  duration: 2,
+                  duration: 2.5,
                   ease: "easeInOut"
                 },
                 opacity: { duration: 0.8, delay: 0.2 }
               }}
-              className="mb-6"
+              className="mb-12"
             >
-              <h2 className="text-5xl md:text-7xl font-bold text-[#1e583d] tracking-wide leading-tight drop-shadow-lg" 
-                 style={{ textShadow: "0 4px 10px rgba(255, 255, 255, 0.6)" }}>
-                COMING SOON
-              </h2>
+              <div className="bg-[#1e583d]/90 backdrop-blur-md px-10 py-6 rounded-[24px] shadow-claymorphic-dark transform transition-all duration-300">
+                <h2 className="text-5xl md:text-7xl font-bold text-white tracking-wide leading-tight font-serif"> 
+                  COMING SOON
+                </h2>
+              </div>
             </motion.div>
             
-            {/* Description - Added red text color */}
+            {/* Description with claymorphic design */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="bg-white/40 backdrop-blur-sm px-6 py-3 rounded-xl mb-12 max-w-2xl mx-auto"
+              whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
+              className="mb-12 max-w-2xl mx-auto"
             >
-              <p className="text-lg font-medium text-red-600">
-                An Initiative by the School of Liberal Arts, Bennett University
-              </p>
-            </motion.div>
-            
-            {/* Search Bar - Improved for mobile */}
-            {/*}
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="w-full max-w-4xl mx-auto mb-12"
-            >
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-full shadow-xl overflow-hidden border border-green-100">
-                <div className="flex flex-col md:flex-row">
-                  {/* First section - Search */}
-                  {/*
-                  <div className="flex items-center pl-4 md:pl-6 py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
-                    <div className="flex items-center text-gray-600 w-full">
-                      <Search className="h-4 w-4 md:h-5 md:w-5 mr-3 flex-shrink-0" />
-                      <input
-                        type="text"
-                        placeholder="Search projects and organizations"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className="bg-transparent border-none outline-none w-full text-sm md:text-base text-gray-700 placeholder:text-gray-500"
-                      />
-                    </div>
-                  </div>
-                  
-                  {/* Second section - Organization Type - Better mobile padding */}
-                  {/*
-                  <div className="flex items-center px-4 md:px-6 py-4 border-b md:border-b-0 md:border-r border-gray-200">
-                    <select className="appearance-none bg-transparent border-none outline-none pr-6 md:pr-12 text-sm md:text-base text-gray-700 w-full">
-                      <option value="">Organization Type</option>
-                      <option value="non-profit">Non-Profit</option>
-                      <option value="corporate">Corporate</option>
-                      <option value="educational">Educational</option>
-                      <option value="governmental">Governmental</option>
-                    </select>
-                  </div>
-                  {/* Button - Better mobile treatment */}
-                  {/*
-                  <div className="p-4 md:p-3">
-                    <Button
-                      className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-xl md:rounded-full py-3 md:py-4 text-sm md:text-base font-medium w-full"
-                    >
-                      Browse Experiences
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            */}
-            
-            {/* Enter Site button and Initiative text */}
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-col items-center"
-            >
-              <Button
-                onClick={handleEnterSite}
-                size="lg"
-                disabled
-                className="bg-[#2c7b50] text-white hover:bg-[#23593b] px-8 py-4 rounded-full font-medium mb-4 opacity-50 cursor-not-allowed"
-              >
-                Enter Site
-              </Button>
-              
-              {/* Added background for better visibility */}
-              {/* <div className="bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full">
-                <p className="text-[#1e583d] font-medium text-sm">
+              <div className="bg-white/95 backdrop-blur-md px-10 py-6 rounded-[22px] shadow-claymorphic border border-red-200/50 transform transition-all duration-300">
+                <p className="text-lg md:text-xl font-semibold text-red-700 font-sans">
                   An Initiative by the School of Liberal Arts, Bennett University
                 </p>
-              </div> */}
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       )}
