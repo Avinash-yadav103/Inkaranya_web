@@ -150,6 +150,7 @@ export function ComingSoon() {
             </motion.div>
             
             {/* Search Bar - Improved for mobile */}
+            {/*}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -159,6 +160,7 @@ export function ComingSoon() {
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl md:rounded-full shadow-xl overflow-hidden border border-green-100">
                 <div className="flex flex-col md:flex-row">
                   {/* First section - Search */}
+                  {/*
                   <div className="flex items-center pl-4 md:pl-6 py-4 flex-1 border-b md:border-b-0 md:border-r border-gray-200">
                     <div className="flex items-center text-gray-600 w-full">
                       <Search className="h-4 w-4 md:h-5 md:w-5 mr-3 flex-shrink-0" />
@@ -173,6 +175,7 @@ export function ComingSoon() {
                   </div>
                   
                   {/* Second section - Organization Type - Better mobile padding */}
+                  {/*
                   <div className="flex items-center px-4 md:px-6 py-4 border-b md:border-b-0 md:border-r border-gray-200">
                     <select className="appearance-none bg-transparent border-none outline-none pr-6 md:pr-12 text-sm md:text-base text-gray-700 w-full">
                       <option value="">Organization Type</option>
@@ -182,8 +185,8 @@ export function ComingSoon() {
                       <option value="governmental">Governmental</option>
                     </select>
                   </div>
-                  
                   {/* Button - Better mobile treatment */}
+                  {/*
                   <div className="p-4 md:p-3">
                     <Button
                       className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-xl md:rounded-full py-3 md:py-4 text-sm md:text-base font-medium w-full"
@@ -193,10 +196,10 @@ export function ComingSoon() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            */}
             
             {/* Enter Site button and Initiative text */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -217,7 +220,6 @@ export function ComingSoon() {
                   An Initiative by the School of Liberal Arts, Bennett University
                 </p>
               </div> */}
-            </motion.div>
           </div>
         </motion.div>
       )}
