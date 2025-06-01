@@ -160,37 +160,6 @@ export function ComingSoon() {
                 </p>
               </div>
             </motion.div>
-            
-            {/* Email notification signup - Interactive component */}
-            {/* <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="w-full max-w-md mx-auto"
-            >
-              <div className="bg-white/80 backdrop-blur-md rounded-[22px] shadow-claymorphic overflow-hidden border border-green-100/50 p-1">
-                <div className="flex flex-col sm:flex-row">
-                  <div className="flex-1">
-                    <input
-                      type="email"
-                      placeholder="Enter your email for updates"
-                      className="w-full h-full px-5 py-4 bg-transparent border-none outline-none text-[#1e583d] placeholder:text-[#1e583d]/70 font-sans"
-                    />
-                  </div>
-                  <motion.div 
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="p-1"
-                  >
-                    <Button
-                      className="bg-[#2c7b50] hover:bg-[#23593b] text-white rounded-[18px] py-4 px-6 font-medium shadow-sm transition-all duration-300"
-                    >
-                      Notify Me
-                    </Button>
-                  </motion.div>
-                </div>
-              </div>
-            </motion.div> */}
           </div>
         </motion.div>
       )}
